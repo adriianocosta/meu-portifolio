@@ -1,0 +1,465 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Ajustes para o painel inicial */
+.header {
+    height: 50vh;
+    background: linear-gradient(to bottom right, #2c3e50, #4ca1af); /* Gradiente profissional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column; /* Organiza em uma coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaçamento entre os elementos */
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    position: absolute;
+    bottom: -75px; /* Metade da altura da imagem */
+    top: 70px;
+    left: 85%; /* Ajuste aqui para mover a foto para a direita */
+    transform: translateX(-50%);
+    z-index: 3; /* Garante que a foto fique acima do painel */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    position: absolute;
+    top: 50%; /* Altere conforme necessário */
+    left: 5%; /* Ajuste para controlar a distância da borda esquerda */
+    transform: translateY(-50%);
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.name h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.name p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #f4f4f4;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.cardo {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 200px; /* Espaçamento em relação ao texto */
+    margin-left: -1110px;
+}
+
+.socialContainer {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(73, 73, 73);
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.socialContainer:hover {
+    transform: scale(1.1);
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+}
+
+.containerFour:hover {
+    background-color: #128C7E;
+}
+
+.socialSvg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+/* Seção Sobre Mim */
+.about {
+    padding: 20px 20px;
+    background: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.about-text {
+    flex: 1; /* O texto ocupa o espaço restante */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.about-text h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: -80px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 50px;
+}
+
+.about-image {
+    max-width: 45%; /* Garante que a imagem não ultrapasse metade do container */
+    margin-left: -40px;
+}
+
+.about-image img {
+    width: 60%; /* A imagem ocupa toda a largura do contêiner */
+    border-radius: 10px; /* Adiciona bordas arredondadas, opcional */
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra, opcional */
+}
+
+
+/* Estilo para a seção de experiências */
+.content {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-carousel {
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    height: 70px; /* Ajuste a altura conforme necessário */
+    background: #ffffff; /* Cor de fundo opcional */
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    animation: scroll 15s linear infinite; /* Animação contínua */
+}
+
+.carousel-track img {
+    height: 70px; /* Ajuste o tamanho do ícone */
+    width: auto;
+    display: block;
+}
+
+/* Para o Desktop (normal) */
+.image-container {
+    display: flex; /* Flexbox para as imagens ficarem em linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 50px; /* Adiciona espaçamento entre as imagens */
+}
+
+.image-container img {
+    height: 60px; /* Ajuste o tamanho das imagens conforme necessário */
+    width: auto; /* Mantém a proporção das imagens */
+}
+
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin: 20px 0;
+}
+
+.codepen-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF; /* Cor inicial do botão */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animação suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.codepen-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+    cursor: pointer;
+}
+
+.codepen-button:active {
+    transform: scale(0.95); /* Reduz levemente o tamanho ao clicar */
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #555;
+}
+
+/* Estilo padrão dos cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+    gap: 20px; /* Espaçamento entre os cartões */
+    margin: 20px 0;
+}
+
+.card {
+    background: #ffffff; /* Fundo claro */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    width: 48%; /* Largura de cada cartão */
+    box-shadow: 0 4px 6px rgba(144, 144, 144, 0.1); /* Sombra leve */
+    position: relative;
+}
+
+/* Alterna o alinhamento vertical */
+.card:nth-child(odd) {
+    margin-top: 0; /* Sem margem no topo para ímpares */
+    align-self: flex-start; /* Alinha no topo */
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        height: 30vh;
+    }
+
+    .name h1 {
+        font-size: 2rem;
+    }
+
+    .name p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        flex-wrap: wrap; /* Permite que os cards quebrem para outra linha em telas menores */
+    }
+
+    .card {
+        max-width: calc(50% - 20px); /* Cada card ocupa 50% da largura em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-left: -15px;
+        top: 60px;
+    }
+
+    .about {
+        text-align: left; /* Alinha o texto à esquerda */
+        padding: 10px 10px; /* Garante que o texto não ultrapasse os limites */
+        background: #ffffff;
+        position: relative;
+        z-index: 1;
+    }
+
+    .about-container {
+        display: block; /* Empilha os elementos verticalmente */
+    }
+
+    .about-text {
+        width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+        margin: 0 auto; /* Centraliza o texto */
+        text-align: left; /* Mantém o alinhamento à esquerda */
+        padding: 0; /* Remove qualquer padding extra */
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    
+    .about-text p {
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 30px;
+    }
+
+    .about-image {
+        display: none; /* Remove a imagem no layout responsivo */
+    }
+
+    /* Animação para o carrossel */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%); /* Ajusta para mover apenas metade do conteúdo */
+        }
+    }
+
+    .skills-carousel {
+        margin: 0px 0;
+        overflow: hidden;
+        position: relative;
+        height: 70px; /* Ajuste a altura conforme necessário */
+        background: #ffffff; /* Cor de fundo opcional */
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 35px;
+        animation: scroll 9s linear infinite; /* Animação contínua */
+        width: 200%; /* Altera a largura para garantir que o conteúdo ocupe o espaço necessário */
+    }
+
+    .carousel-track img {
+        height: 70px; /* Ajuste o tamanho do ícone */
+        width: auto;
+        display: block;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center; /* Centraliza os botões */
+        gap: 20px; /* Espaçamento entre os botões */
+        margin: 20px 0;
+    }
+    
+    .codepen-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #007BFF; /* Cor inicial do botão */
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        transition: transform 0.2s ease, background-color 0.3s ease; /* Animação suave */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    }
+    
+    .codepen-button:hover {
+        background-color: #0056b3; /* Cor ao passar o mouse */
+        cursor: pointer;
+    }
+    
+    .codepen-button:active {
+        transform: scale(0.95); /* Reduz levemente o tamanho ao clicar */
+    }
+    
+    .codepen-button span {
+        font-size: 0.9rem; /* Ajuste o tamanho do texto */
+        font-weight: normal; /* Caso queira que o texto fique menos "pesado" */
+        line-height: 1.2; /* Espaçamento interno do texto */
+    }
+
+    .experience .cards {
+        display: block; /* Faz com que os cards fiquem um abaixo do outro */
+    }
+
+    .experience .card {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espaçamento entre o ponto e o texto */
+        padding: 10px 0; /* Espaçamento entre os cards */
+        border-bottom: 1px solid #ddd; /* Opcional: linha para separar cada item */
+        width: 100%; /* Aumenta a largura para ocupar todo o espaço */
+        max-width: 100%; /* Garante que não fique muito perto das bordas */
+        margin: 0px auto; /* Centraliza o card */
+    }
+
+    .experience .card::before {
+        content: '•'; /* Adiciona o ponto preto */
+        font-size: 1.5rem; /* Ajusta o tamanho do ponto */
+        color: #000; /* Cor preta */
+    }
+
+    .experience .card p {
+        margin: 0; /* Remove margens do texto */
+        font-size: 1rem; /* Ajuste do tamanho da fonte */
+        color: #333; /* Cor do texto */
+    }
+    .cardo {
+        display: flex;
+        justify-content: start;
+        gap: 15px;
+        margin-top: 150px; /* Espaçamento em relação ao texto */
+        margin-left: -250px;
+    }
+    
+}
